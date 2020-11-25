@@ -31,8 +31,13 @@
 #### 2. Run myLinearSVM.py to run the linear svm on the .csv files created by the preprocessor (validation part in progress)
 #### 3. Run myKernelSVM.py to run the kernel svm on the .csv files created by the preprocessor (validation part in progress)
 
-NOTE: the input image dimension used is set in preprocessor.py; currently I'm using 150x150, but this does take a few minutes to run.
-      the number of training images to use is set in myLinearSVM.py/myKernelSVM.py. I've typically been using a few hundred for the sake of time.
-      validation is in progress, AKA I haven't done it yet. So far I just loop through the possible C values and create a model/output for each.
+#### NOTE:
 
-      I've been getting about 75% accuracy overall for both the Linear and Kernel models
+> the input image dimension used is set in preprocessor.py; currently I'm using 150x150, but this does take a few minutes to run.
+
+> the number of training images to use is set in myLinearSVM.py/myKernelSVM.py. I've typically been using a few hundred for the sake of time.
+
+> validation is in progress, AKA I haven't done it yet. So far I just loop through the possible C values and create a model/output for each.
+
+
+> I've been getting about 75% accuracy overall for both the Linear and Kernel models
