@@ -7,9 +7,9 @@ k = 5 # Cross validation parameter
 C = [.01, .1, 1., 10, 100]
 
 X_train = np.asarray(pd.read_csv("X_train.csv"))[:n]
-Y_train = np.asarray(pd.read_csv("y_train.csv"))[:n].reshape([X_train.shape[0],])
+Y_train = np.asarray(pd.read_csv("Y_train.csv"))[:n].reshape([X_train.shape[0],])
 X_test = np.asarray(pd.read_csv("X_test.csv"))
-Y_test = np.asarray(pd.read_csv("y_test.csv")).reshape([X_test.shape[0],])
+Y_test = np.asarray(pd.read_csv("Y_test.csv")).reshape([X_test.shape[0],])
 
 X_train = np.c_[np.arange(len(X_train)) % k, X_train]
 Y_train = np.c_[np.arange(len(Y_train)) % k, Y_train]
@@ -59,6 +59,6 @@ confusion_matrix_test = np.array([[sum((Y_test == 0) & (pred_test == 0)), sum((Y
 error_train = float(sum(Y_train[:,1] != pred_train)) / len(Y_train[:,1])
 error_test = float(sum(Y_test != pred_test)) / len(Y_test)
     
-print("Testing error = " + str(error_test))
-print("Testing confusion matrix:")
+print("Final testing error = " + str(error_test))
+print("Final testing confusion matrix:")
 print(confusion_matrix_test)
