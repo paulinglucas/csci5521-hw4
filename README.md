@@ -25,9 +25,13 @@
 
 > Each set (training, testing, and validation) is split into NORMAL and PNEUMONIA subdirectories. The samples in the NORMAL directories will be assigned the label 0 and sameples in the PNEUMONIA directories will be assigned the label 1.
 
+## STEP-BY_STEP METHOD
 #### 1. Run preprocessor.py to generation the X_train.csv, y_train.csv, X_test.csv, and y_test.csv.
 #### 2. Run myLinearSVM.py to run the linear svm on the .csv files created by the preprocessor
 #### 3. Run myKernelSVM.py to run the kernel svm on the .csv files created by the preprocessor (in progress)
+
+## MAIN.PY METHOD
+#### 1. Run 'python main.py' to have the program train and test both SVM methods, and then perform PCA on the data and compare the two
 
 #### NOTE:
 
