@@ -26,8 +26,8 @@ def main():
 
     ## now compare the two for problem #4
     data = pca()
-    final_C_lin, error_lin = linearSVM(data, 0.1)
-    final_C_kern, error_kern = kernelSVM(data, 100)
+    final_C_lin, error_lin = linearSVM(data, final_C_lin)
+    final_C_kern, error_kern = kernelSVM(data, final_C_kern)
 
     if error_lin < error_kern:
         print("LINEAR SVM PERFORMS BETTER WITH AN ERROR RATE OF {}".format(error_lin))
