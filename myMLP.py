@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.neural_network import MLPClassifier
 
 def MLP(data, final_C=None):
-    print("BEGIN LINEAR SVM TRAINING AND TESTING")
+    print("BEGIN MULTI_LAYER PERCEPTRON TRAINING AND TESTING")
     n = 600 # number of training samples to use
     k = 5 # Cross validation parameter
     C = [[50],[100],[150],[200],[250]]
