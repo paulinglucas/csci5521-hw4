@@ -4,6 +4,7 @@ import pandas as pd
 from preprocess import preprocess
 from myLinearSVM import linearSVM
 from myKernelSVM import kernelSVM
+from myMLP import MLP
 from pca import pca
 
 def main():
@@ -25,9 +26,12 @@ def main():
     final_C_kern, error_kern = kernelSVM(data)
 
     ## now compare the two for problem #4
-    data = pca()
-    final_C_lin, error_lin = linearSVM(data, final_C_lin)
-    final_C_kern, error_kern = kernelSVM(data, final_C_kern)
+    data_pca = pca()
+    final_C_lin, error_lin = linearSVM(data_pca, final_C_lin)
+    final_C_kern, error_kern = kernelSVM(data_pca, final_C_kern)
+
+    ## #5 multi-layer perceptron for extra credit
+    final_C_mlp, error_mlp = MLP(data)
 
     if error_lin < error_kern:
         print("LINEAR SVM PERFORMS BETTER WITH AN ERROR RATE OF {}".format(error_lin))
