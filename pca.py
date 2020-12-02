@@ -2,13 +2,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def pca():
-    n = 600
-
-    X_train = np.asarray(pd.read_csv("X_train.csv"))[:n]
-    Y_train = np.asarray(pd.read_csv("y_train.csv"))[:n].reshape([X_train.shape[0],])
-    X_test = np.asarray(pd.read_csv("X_test.csv"))[:n]
-    Y_test = np.asarray(pd.read_csv("y_test.csv"))[:n].reshape([X_test.shape[0],])
+def pca(data):
+    X_train = data[0]
+    Y_train = data[1]
+    X_test = data[2]
+    Y_test = data[3]
 
     # Center data
     mean_train = np.mean(X_train,0)

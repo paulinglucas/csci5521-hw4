@@ -68,7 +68,7 @@ def linearSVM(data, final_C=None):
     print(confusion_matrix_test)
     print()
 
-    return final_C, error_test
+    return final_C, error_test, model
 
 if __name__ == '__main__':
     X_train = np.asarray(pd.read_csv("X_train.csv"))[:n]
