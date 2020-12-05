@@ -25,6 +25,7 @@ def main():
     c = np.sum((clf.support_vectors_[n:].T*alphas[0][n:]).T,0)
     d = np.sum((clf.support_vectors_[:n].T*alphas[0][:n]).T,0)
 
+    print("w = c - d = ")
     print(c, "-", d)
 
 if __name__ == "__main__":
