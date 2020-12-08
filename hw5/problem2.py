@@ -8,8 +8,8 @@ np.set_printoptions(suppress=True)
 class MLP:
     def __init__(self, weights = (np.random.random([2,3]) - .5), lr=.000005, max_epoch = 150, verbose = False):
 #        self.w = (np.random.random([2,3]) - .5)
-        self.w = weights
-        self.v = (np.random.random(3) - .5)
+        self.w = np.array([[1,-1,0],[1,-1,1]])#weights
+        self.v = np.array([-1.5,1,1])#(np.random.random(3) - .5)
         self.lr = lr
         self.max_epoch = max_epoch
         self.training_loss = []
@@ -157,7 +157,7 @@ plt.savefig("fig_a_3")
 ##################################################
 
 ## Construct the data for problem b
-n = 1000
+n = 10000
 X = np.empty([n,2])
 y = np.zeros(n)
 for i in range(n):
