@@ -32,6 +32,9 @@ print("final coefficients")                          # DISPLAY RESULTS
 print(str(syn0))
 print(str(syn1))
 print(str(syn2))
+
+print("")
+print("OUTPUTS")
 print(sigmoid(sigmoid(sigmoid(X.dot(syn0)).dot(syn1)).dot(syn2)))
 
 def plot_error():
